@@ -1,9 +1,13 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import { createApp } from 'vue'
+import App from './App.vue'
+import { setupAntdv } from './plugins/antdv'
+import router from './router'
+import store from './store'
 
-createApp(App)
+import '@/assets/global.less'
+
+const app = createApp(App)
   .use(store)
   .use(router)
-  .mount("#app");
+setupAntdv(app)
+app.mount('#app')

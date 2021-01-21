@@ -7,7 +7,7 @@ export const requests = (options: AxiosRequestConfig) => {
 
 export const API = {
   docs: {
-    refresh: 'refresh',
+    getContent: 'get_content',
     getMenu: 'get_menu',
   },
 }

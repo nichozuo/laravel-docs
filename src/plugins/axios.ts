@@ -26,7 +26,7 @@ const handleError = (data: { message: string }) => {
  * @description axios初始化
  */
 const instance = axios.create({
-  baseURL: '/api/docs/index',
+  baseURL: '/api/docs/home',
   timeout: 3000,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',

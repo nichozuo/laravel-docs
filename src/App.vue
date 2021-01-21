@@ -50,7 +50,7 @@
     DatabaseOutlined,
     GlobalOutlined,
   } from '@ant-design/icons-vue'
-  import { defineComponent, ref } from 'vue'
+  import { defineComponent, onMounted, ref } from 'vue'
   import { useRouter } from 'vue-router'
   import Loading from '@/components/Loading.vue'
 
@@ -65,12 +65,13 @@
     },
     setup() {
       const selectedKeys = ref(['readme'])
+      const router = useRouter()
 
-      const route = useRouter()
-
+      onMounted(() => {
+        selectedKeys.value = [location.pathname]
+      })
       const onClick = ({ key }: any) => {
-        console.log(key)
-        route.push(key)
+        router.push(key)
       }
       return {
         selectedKeys,

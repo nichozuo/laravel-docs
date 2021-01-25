@@ -3,9 +3,9 @@
   <a-layout id="layout">
     <a-layout-header class="header">
       <div class="title">API文档</div>
-      <div class="refresh">
+      <!-- <div class="refresh">
         <a-button>刷新</a-button>
-      </div>
+      </div> -->
       <a-menu
         theme="dark"
         mode="horizontal"
@@ -36,9 +36,9 @@
       </a-menu>
     </a-layout-header>
     <router-view />
-    <a-layout-footer style="text-align: center">
+    <!-- <a-layout-footer style="text-align: center">
       Created by Nichozuo © 2021
-    </a-layout-footer>
+    </a-layout-footer> -->
   </a-layout>
 </template>
 
@@ -51,7 +51,7 @@
     GlobalOutlined,
   } from '@ant-design/icons-vue'
   import { defineComponent, onMounted, ref } from 'vue'
-  import { useRouter } from 'vue-router'
+  import { useRoute, useRouter } from 'vue-router'
   import Loading from '@/components/Loading.vue'
 
   export default defineComponent({
@@ -65,12 +65,16 @@
     },
     setup() {
       const selectedKeys = ref(['readme'])
+      const route = useRoute()
       const router = useRouter()
 
       onMounted(() => {
-        selectedKeys.value = [location.pathname]
+        const path = location.hash.substring(1, location.hash.indexOf('?'))
+        selectedKeys.value = [path]
       })
       const onClick = ({ key }: any) => {
+        console.log(key, 'key')
+        router.push({ query: { theKey: '', theOpen: '' } })
         router.push(key)
       }
       return {

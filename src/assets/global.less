@@ -5,3 +5,60 @@
 .ant-layout-header {
   padding: 0;
 }
+
+// th {
+//   padding: 10px 20px;
+//   border: 1px solid #999;
+// }
+
+// td {
+//   padding: 10px 20px;
+//   border: 1px solid #999;
+// }
+
+h1 {
+  font-size: 36px;
+}
+
+.custom {
+  height: calc(100vh - 190px);
+  overflow-x: hidden;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  table {
+    margin: 20px 0;
+    width: 100%;
+    border-top: 1px solid #f8f8f8;
+    border-left: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+    thead {
+      height: 40px;
+      line-height: 40px;
+      background-color: #eee;
+      font-weight: bold;
+      th {
+        padding: 0 10px;
+        border-right: 1px solid #f8f8f8;
+      }
+    }
+    tbody {
+      font-size: 13px;
+      font-weight: 400;
+      tr {
+        height: 35px;
+        line-height: 35px;
+        border-top: 1px solid #f8f8f8;
+        td {
+          border-right: 1px solid #f8f8f8;
+          padding: 0 10px;
+        }
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+        &:hover {
+          background-color: #f0faff;
+        }
+      }
+    }
+  }
+}

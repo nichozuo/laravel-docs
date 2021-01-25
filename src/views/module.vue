@@ -2,7 +2,7 @@
   <a-layout-sider width="250" style="background: #fff">
     <MyMenu type="modules" v-model:theKey="theKey" />
   </a-layout-sider>
-  <a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">
+  <a-layout-content :style="{ padding: '0 50px', minHeight: '280px' }">
     <MyContent type="modules" :theKey="theKey" />
   </a-layout-content>
 </template>

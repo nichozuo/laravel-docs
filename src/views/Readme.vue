@@ -1,5 +1,5 @@
 <template>
-  <a-layout-sider width="250" style="background: #fff">
+  <a-layout-sider width="300px" style="background: #fff">
     <MyMenu type="readme" v-model:theKey="theKey" />
   </a-layout-sider>
   <a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">

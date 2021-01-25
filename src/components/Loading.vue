@@ -25,7 +25,7 @@
     z-index: 999;
     display: flex;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.1);
+    // background: rgba(0, 0, 0, 0.1);
     padding-top: 30vh;
   }
 </style>
